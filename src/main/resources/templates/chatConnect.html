@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chat Connect</title>
+</head>
+<body>
+<form action="#" th:action="@{/connect}" th:object="${chatSession}" method="post">
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p>Email: <input type="text" th:field="*{email}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+
+</body>
+</html>

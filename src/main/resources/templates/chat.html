@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<th:block th:each="message : ${session.chatSession.messageList}">
+    <b th:text="${message.author}+': '"></b><b th:text="${message.content}" th:remove="tag"></b><br>
+</th:block>
+<form action="#" th:action="@{/}" th:object="${newMessage}" method="post">
+    <p>Message: <input type="text" th:field="*{content}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>
